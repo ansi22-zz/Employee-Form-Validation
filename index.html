@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Input Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- form container -->
+        <div class="form-box">
+            <!-- dots -->
+            <div class="row">
+                <span class="dot" id="red"></span>
+                <span class="dot" id="yellow"></span>
+                <span class="dot" id="green"></span>
+            </div>
+            <br>
+            <!-- title -->
+            <div class="row">
+                <span id="arrow">
+                    <h1>&gt;</h1>
+                </span> &nbsp;&nbsp;
+                <span>
+                    <h2 id="title">Employee Input Form
+                </span>
+                <span id="color">_</span> &nbsp;&nbsp;
+            </div>
+            <!-- form -->
+            <div class="form">
+                <form name="empform" method="post" id="myform" onsubmit="return false">
+                    <input type="text" id="firstname" name="firstname" placeholder="First Name" autofocus required>
+                    <input type="text" id="secondname" name="secondname" placeholder="Last Name" required>
+                    <div class="row">
+                        <span id="style">Gender : </span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="female" name="gender" value="Female" required>
+                        <label for="female">Female</label>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <span id="style">Marital Status : </span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="married" name="marital" value="Married" onclick="maritalStatus()"
+                            required>
+                        <label for="married">Married</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="unmarried" name="marital" value="Unmarried" onclick="maritalStatus()"
+                            required>
+                        <label for="unmarried">Unmarried</label>
+                    </div>
+                    <br>
+                    <input type="text" id="spousename" name="spousename" placeholder="Spouse Name" disabled required>
+                    <input type="text-area" id="description" name="description" placeholder="Description" required>
+                    <label id="col">
+                        <input type="checkbox" id="check" name="remember" required> I accept all Terms/Conditions.
+                    </label>
+                    <br><br>
+                    <div class="row">
+                        <button type="reset" id="btn">Reset</button>
+                        <button type="submit" name="Submit" id="btn" onclick="return validateForm()">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
