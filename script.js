@@ -44,6 +44,7 @@ function validateForm() {
 
   if (document.getElementById("check").checked == false) {
     alert("Checkbox not marked!");
+    return 0;
   }
 
   // checks for white-space
