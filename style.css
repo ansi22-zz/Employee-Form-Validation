@@ -14,7 +14,7 @@
   background-image: linear-gradient(to right, #452c63, #d8bfd8);
 }
 .form-box {
-  height: 60%;
+  height: 65%;
   width: 35%;
   display: flex;
   flex-direction: column;
@@ -66,25 +66,36 @@
   color: white;
 }
 
-#col {
+#col,
+#label {
   color: #d8bfd8;
 }
 
 .form {
   margin-top: 25px;
-  margin-left: 100px;
+  margin-left: 60px;
   justify-content: center;
   align-items: center;
 }
 
+#f-er,
+#l-er,
+#s-er {
+  display: none;
+  margin-left: 200px;
+  color: #ed4040;
+  text-shadow: 0px 1px rgba(216, 191, 216, 0.45);
+}
+
 #in,
-#spousename,
-#firstname,
-#secondname,
+#spouse-name,
+#first-name,
+#second-name,
 #description {
-  width: 400px;
+  width: 300px;
   height: 40px;
   margin-bottom: 3%;
+  margin-left: 60px;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: lighter;
@@ -97,10 +108,14 @@
   backdrop-filter: blur(5px);
 }
 
+#spouse-name {
+  background-color: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
 #in:focus,
-#spousename:focus,
-#firstname:focus,
-#secondname:focus,
+#spouse-name:focus,
+#first-name:focus,
+#second-name:focus,
 #description:focus {
   outline: none;
   border: 1px solid #d8bfd8;
@@ -115,7 +130,7 @@ input {
   color: white;
 }
 #btn {
-  width: 190px;
+  width: 230px;
   height: 50px;
   background-color: #c28fc2;
   border: none;
@@ -129,20 +144,45 @@ input {
   margin-right: 20px;
 }
 
+#btn:hover {
+  box-shadow: 0 0 10px 1px rgba(216, 191, 216, 0.95);
+  cursor: pointer;
+}
+
+input[type="text"]:disabled {
+  background: #ccc;
+}
+
 @media screen and (max-width: 768px) {
   .form-box {
-    height: 60%;
+    height: 50%;
     width: 85%;
   }
   .container {
-    height: 1180px;
+    height: 1300px;
     width: 550px;
   }
   .form {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 35px;
   }
   .form-box {
     height: 50%;
+  }
+  #in,
+  #spouse-name,
+  #first-name,
+  #second-name,
+  #description {
+    width: 235px;
+    margin-left: 40px;
+  }
+  #btn {
+    width: 188px;
+  }
+  #f-er,
+  #l-er,
+  #s-er {
+    margin-left: 155px;
   }
 }
