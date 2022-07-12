@@ -36,6 +36,17 @@ function validateForm() {
     alert("Please select your Marital status!");
     return 0;
   }
+  
+  if (marital[0].checked == true) {
+    if (spouseName == null || spouseName == "") {
+      alert("Spouse name can't be empty!");
+      return 0;
+    }
+    if (containsWhitespace(spouseName) == true) {
+      alert("Whitespace found in Spouse Name, click respective field to edit!");
+      return 0;
+    }
+  }
 
   if (description == null || description == "") {
     alert("Description can't be empty!");
@@ -57,17 +68,7 @@ function validateForm() {
     alert("Whitespace found in Last Name, click respective field to edit!");
     return 0;
   }
-
-  if (marital[0].checked == true) {
-    if (spouseName == null || spouseName == "") {
-      alert("Spouse name can't be empty!");
-      return 0;
-    }
-    if (containsWhitespace(spouseName) == true) {
-      alert("Whitespace found in Spouse Name, click respective field to edit!");
-      return 0;
-    }
-  }
+  
   //thankyou alert if everything works fine
   alert(
     "Employee input has been saved, to input other record press reset button. Thankyou!"
