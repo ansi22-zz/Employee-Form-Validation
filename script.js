@@ -13,6 +13,10 @@ function maritalStatus() {
   let marital = document.forms["empform"]["marital"];
   if (marital[0].checked == true) {
     document.getElementById("spouse-name").disabled = false;
+    document.getElementById("spouse-name").style.backgroundColor =
+      "rgba(216, 191, 216, 0.45)";
+    document.getElementById("spouse-name").style.border =
+      "1px solid rgba(216, 191, 216, 0.45)";
   } else if (marital[1].checked == true) {
     document.getElementById("spouse-name").disabled = true;
   }
