@@ -71,6 +71,10 @@
   color: #d8bfd8;
 }
 
+#label {
+  margin-top: 6px;
+}
+
 .form {
   margin-top: 25px;
   margin-left: 60px;
@@ -82,9 +86,31 @@
 #l-er,
 #s-er {
   display: none;
-  margin-left: 200px;
+  margin-top: 40px;
+  margin-left: -160px;
+  font-size: 10px;
   color: #ed4040;
-  text-shadow: 0px 1px rgba(216, 191, 216, 0.45);
+}
+
+#f-req,
+#s-req,
+#l-req,
+#d-req {
+  display: none;
+  margin-top: 40px;
+  margin-left: -80px;
+  font-size: 10px;
+  color: #ed4040;
+}
+
+#g-req,
+#m-req,
+#c-req {
+  display: none;
+  margin-top: 6px;
+  margin-left: 6px;
+  font-size: 10px;
+  color: #ed4040;
 }
 
 #in,
@@ -94,7 +120,7 @@
 #description {
   width: 300px;
   height: 40px;
-  margin-bottom: 3%;
+  margin-bottom: 5%;
   margin-left: 60px;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
@@ -183,6 +209,6 @@ input[type="text"]:disabled {
   #f-er,
   #l-er,
   #s-er {
-    margin-left: 155px;
+    font-size: 1px;
   }
 }
