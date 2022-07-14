@@ -76,11 +76,30 @@ function validateForm() {
     document.getElementById("first-name").style.border = "2px solid #ed4040";
     return 0;
   }
+  if (
+    containsWhitespace(firstName) == true ||
+    containsNumber(firstName) == true
+  ) {
+    document.getElementById("f-er").style.display = "inline";
+    document.getElementById("first-name").style.border = "2px solid #ed4040";
+    return 0;
+  }
+  
   if (lastName == null || lastName == "") {
     document.getElementById("l-req").style.display = "inline";
     document.getElementById("second-name").style.border = "2px solid #ed4040";
     return 0;
   }
+  
+  if (
+    containsWhitespace(lastName) == true ||
+    containsNumber(lastName) == true
+  ) {
+    document.getElementById("l-er").style.display = "inline";
+    document.getElementById("second-name").style.border = "2px solid #ed4040";
+    return 0;
+  }
+  
   if (gender[0].checked == false && gender[1].checked == false) {
     document.getElementById("g-req").style.display = "inline";
     return 0;
@@ -111,24 +130,6 @@ function validateForm() {
   }
   if (document.getElementById("check").checked == false) {
     document.getElementById("c-req").style.display = "inline";
-    return 0;
-  }
-
-  if (
-    containsWhitespace(firstName) == true ||
-    containsNumber(firstName) == true
-  ) {
-    document.getElementById("f-er").style.display = "inline";
-    document.getElementById("first-name").style.border = "2px solid #ed4040";
-    return 0;
-  }
-
-  if (
-    containsWhitespace(lastName) == true ||
-    containsNumber(lastName) == true
-  ) {
-    document.getElementById("l-er").style.display = "inline";
-    document.getElementById("second-name").style.border = "2px solid #ed4040";
     return 0;
   }
 
